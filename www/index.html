@@ -6,26 +6,26 @@
     <script type="text/javascript">
     document.addEventListener("deviceready", function() {
       const GOOGLE = {"lat": 0.914660, "lng": 104.471984};
-      var div = document.getElementById("map_canvas");
+                          var mapDiv = document.getElementById("gantimapsdisini");
 
-      // Create a Google Maps native view under the map_canvas div.
-      var map = plugin.google.maps.Map.getMap(div, {
+                            // Initialize the map plugin
+                            var map = plugin.google.maps.Map.getMap(mapDiv, {
                               'camera': {
                                 'latLng': GOOGLE,
                                 'zoom': 17
                               }
                             });
-// Add a maker
-        var marker = map.addMarker({
-          position: GOOGLE,
-          title: "Welecome to \n" +
+
+                            // Add a maker
+                            var marker = map.addMarker({
+                              position: GOOGLE,
+                              title: "Welecome to \n" +
                  "Cordova GoogleMaps plugin for iOS and Android",
           snippet: "This plugin is awesome!",
-          animation: plugin.google.maps.Animation.BOUNCE
-        });
-
-        // Show the info window
-        marker.showInfoWindow();
+                              animation: plugin.google.maps.Animation.BOUNCE
+                            });
+                            // Show the info window
+                            marker.showInfoWindow();
       // If you click the button, do something...
      
 
